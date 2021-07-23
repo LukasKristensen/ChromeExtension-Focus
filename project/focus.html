@@ -11,19 +11,26 @@
 			<div class = "menu">
 				<h1>DEVOTE</h1>
 				<ul>
-					<li><a href="savvy.html" class="link_menu">Focus</a></li>
-					<li><a href="focus.html" class="link_menu">Configure pages</a></li>
+					<li><a href="focus.html" class="link_menu">Focus</a></li>
+					<li><a href="config_list.html" class="link_menu">Configure pages</a></li>
+					<li><a href="config_landing.html" class="link_menu">Configure landing page</a></li>
+					<li><a href="custom_counter.html" class="link_menu">Streak counter (?) Books (?)</a></li>
 				</ul>	
 			</div>
-
 			<div>
-				<h1 class = "headlineFocus">Configure pages</h1>
-				<textarea id="notebookInput"></textarea>
-				<h4 id="saveProgress">Saved.</h4>
+				<h4 class="poem">"If you're going to try, go all the way. Otherwise, don't even start. This could mean losing girlfriends, wives, relatives and maybe even your mind. It could mean not eating for three or four days. It could mean freezing on a park bench. It could mean jail. It could mean derision. It could mean mockery--isolation. Isolation is the gift. All the others are a test of your endurance, of how much you really want to do it. And, you'll do it, despite rejection and the worst odds. And it will be better than anything else you can imagine. If you're going to try, go all the way. There is no other feeling like that. You will be alone with the gods, and the nights will flame with fire. You will ride life straight to perfect laughter. It's the only good fight there is."</h4>
+				<h4 class="poem_quote">- Charles Bukowski, Factotum</h4>
+				<div class="row">
+					<h2 class = "focusModeText">Focus</h2>
 
-				<button id="saveLocalData">
-					<label>Save</label>
-				</button>
+					<label class="switch">
+						  <input type ="checkbox" id="switch">
+						  <span class="slider round"></span>
+					</label>
+
+				</div>
+				<h2 id="streak_focus"></h2>
+
 			</div>
 		</div>
 		<!--End row-->
@@ -33,4 +40,4 @@
 </html>
 
 
-<script src="focus_config.js"></script>
+<script src="fallback.js"></script>
