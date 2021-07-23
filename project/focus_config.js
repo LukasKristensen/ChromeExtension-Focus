@@ -14,9 +14,9 @@ document.getElementById("saveLocalData").onclick = function(){
 
 	document.getElementById("saveProgress").innerHTML= "Saved Data"
 
-	chrome.storage.sync.set({"focusState": "True"}, function(){
-		console.log("test")
-	})
+	//chrome.storage.sync.set({"focusState": "True"}, function(){
+	//	console.log("test")
+	//})
 
 
 	chrome.storage.sync.get(["userData"], function(items){

@@ -1,0 +1,16 @@
+#customQuote{
+	width: 90vh;
+	height: 30vh;
+}
+#customAuthor{
+	width: 90vh;
+	height: 4vh;
+}
+#customImage{
+	width: 90vh;
+	height: 2vh;
+}
+h2{
+	margin-left: 13vh;
+	margin-bottom: 0vh;
+}

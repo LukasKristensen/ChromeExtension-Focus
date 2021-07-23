@@ -1,4 +1,7 @@
 
+
+// FOCUS AND STREAK COUNTING STORING
+
 chrome.storage.sync.get(["focusState"], function(items){
     document.getElementById("switch").checked = items["focusState"]
 });
@@ -46,28 +49,28 @@ function countFocus(){
 					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 					if (days == 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+days+" Day "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+days+" Day "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
 					}
 					if (days > 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+days+" Days "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+days+" Days "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
 					}
 					if (days == 0 && hours == 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+hours+" Hour "//+minutes+" Minutes "+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+hours+" Hour "//+minutes+" Minutes "+seconds+" Seconds"
 					}
 					if (days == 0 && hours > 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+hours+" Hours "//+minutes+" Minutes "+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+hours+" Hours "//+minutes+" Minutes "+seconds+" Seconds"
 					}
 					if (days == 0 && hours == 0 && minutes == 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+minutes+" Minute "//+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+minutes+" Minute "//+seconds+" Seconds"
 					}
 					if (days == 0 && hours == 0 && minutes > 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+minutes+" Minutes "//+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+minutes+" Minutes "//+seconds+" Seconds"
 					}
 					if (days == 0 && hours == 0 && minutes == 0 && seconds == 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+seconds+" Second"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+seconds+" Second"
 					}
 					if (days == 0 && hours == 0 && minutes == 0 && seconds > 1){
-						document.getElementById("streak_focus").innerHTML = "Focus streak "+seconds+" Seconds"
+						document.getElementById("streak_focus").innerHTML = "Current focus streak "+seconds+" Seconds"
 					}
 				});
 			}})
