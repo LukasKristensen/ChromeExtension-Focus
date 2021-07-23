@@ -27,9 +27,9 @@ textarea{
 
 h1{
 	color: white;
-	font-size: 4vh;
-	margin-top: 4vh;
-	margin-left: 13vh;
+	font-size: 3vh;
+	margin-top: 2vh;
+	margin-left: 1vh;
 	margin-bottom: 1vh;
 }
 
@@ -59,6 +59,50 @@ button{
 	margin-right: 0vh;
 }
 
+li{
+	text-align: left;
+	margin-left: 0vh;
+	color: transparent;
+	margin-top: 2vh;
+	font-size: 1.5vh;
+	font-weight: bold;
+}
+ul{
+	padding-left: 1.5vh;
+	margin: 0vh;
+}
+
+#streak_focus{
+	font-weight:normal;
+	font-size: 2vh;
+	color: gray;
+	margin-left: 70vh;
+}
+
+.poem{
+	font-style: italic;
+	font-weight: normal;
+	width: 50vh;
+	margin-top: 30vh;
+	margin-left: 50vh;
+}
+
+.poem_quote{
+	font-style: italic;
+	font-weight: normal;
+	width: 50vh;
+	margin-top: 1vh;
+	margin-left: 90vh;
+}
+
+.headlineFocus{
+	color: white;
+	font-size: 4vh;
+	margin-top: 4vh;
+	margin-left: 13vh;
+	margin-bottom: 1vh;
+}
+
 .row{
 	margin-left: 0%;
 	display: flex;
@@ -76,7 +120,7 @@ button{
 }
 
 .focusModeText{
-	margin-top: 70.5vh;
+	margin-top: 10.5vh;
 	margin-left: 70vh;
 	font-size: 3vh;
 }
@@ -88,7 +132,7 @@ button{
 	width: 60px;
 	height: 34px;
 	margin-left: 3vh;
-	margin-top: 70vh;
+	margin-top: 10vh;
 }
 
 .switch input { 

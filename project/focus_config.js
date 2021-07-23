@@ -1,4 +1,3 @@
-//LOAD DATA
 chrome.storage.sync.get(["userData"], function(items){
     document.getElementById("notebookInput").innerHTML = items["userData"]
     localStorage["testAttemptSave"] = "testSaveData"
