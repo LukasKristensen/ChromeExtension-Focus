@@ -1,38 +1,3 @@
-
-
-// FOCUS AND STREAK COUNTING STORING
-
-chrome.storage.sync.get(["focusState"], function(items){
-    document.getElementById("switch").checked = items["focusState"]
-});
-
-document.getElementById("switch").onclick = function(){
-
-	chrome.storage.sync.set({"focusState": document.getElementById("switch").checked}, function(){
-		console.log("Updated focus state",document.getElementById("switch").checked)
-	})
-
-	if (document.getElementById("switch").checked == true){
-		currentDate = new Date()
-		chrome.storage.sync.set({"focusedSince": currentDate.toString()}, function(){
-			console.log("Updated latest focus date",currentDate)
-		})
-		chrome.storage.sync.set({"reps": 0}, function(){
-			console.log("Reps updated to:",0)
-		})
-
-		chrome.storage.sync.get(["focusedSince"], function(items){
-			console.log("itemsDebug",items["focusedSince"])
-
-	})
-	}
-	else{
-		document.getElementById("streak_focus").innerHTML = ""
-	}
-	countFocus()
-
-}
-
 countFocus()
 
 function countFocus(){
