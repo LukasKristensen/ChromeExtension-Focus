@@ -1,6 +1,8 @@
 countFocus()
 
 function countFocus(){
+	prev_set = ""
+
 	var whileTrue = setInterval(function() {
 		chrome.storage.sync.get(["focusState"], function(items){
 		    if(items["focusState"]==true || items["focusState"]=="True"){
@@ -16,29 +18,36 @@ function countFocus(){
 					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+					current_set = ""
+
 					if (days == 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+days+" Day "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
+						current_set = "Current focus streak "+days+" Day "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
 					}
-					if (days > 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+days+" Days "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
+					else if (days > 1){
+						current_set = "Current focus streak "+days+" Days "//+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds"
 					}
-					if (days == 0 && hours == 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+hours+" Hour "//+minutes+" Minutes "+seconds+" Seconds"
+					else if (days == 0 && hours == 1){
+						current_set = "Current focus streak "+hours+" Hour "//+minutes+" Minutes "+seconds+" Seconds"
 					}
-					if (days == 0 && hours > 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+hours+" Hours "//+minutes+" Minutes "+seconds+" Seconds"
+					else if (days == 0 && hours > 1){
+						current_set = "Current focus streak "+hours+" Hours "//+minutes+" Minutes "+seconds+" Seconds"
 					}
-					if (days == 0 && hours == 0 && minutes == 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+minutes+" Minute "//+seconds+" Seconds"
+					else if (days == 0 && hours == 0 && minutes == 1){
+						current_set = "Current focus streak "+minutes+" Minute "//+seconds+" Seconds"
 					}
-					if (days == 0 && hours == 0 && minutes > 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+minutes+" Minutes "//+seconds+" Seconds"
+					else if (days == 0 && hours == 0 && minutes > 1){
+						current_set = "Current focus streak "+minutes+" Minutes "//+seconds+" Seconds"
 					}
-					if (days == 0 && hours == 0 && minutes == 0 && seconds == 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+seconds+" Second"
+					else if (days == 0 && hours == 0 && minutes == 0 && seconds == 1){
+						current_set = "Current focus streak "+seconds+" Second"
 					}
-					if (days == 0 && hours == 0 && minutes == 0 && seconds > 1){
-						document.getElementById("streak_focus").innerHTML = "Current focus streak "+seconds+" Seconds"
+					else if (days == 0 && hours == 0 && minutes == 0 && seconds > 1){
+						current_set = "Current focus streak "+seconds+" Seconds"
+					}
+
+					if (current_set != prev_set){
+						prev_set = current_set
+						document.getElementById("streak_focus").innerHTML = current_set
 					}
 				});
 			}})

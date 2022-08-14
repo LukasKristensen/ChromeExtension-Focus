@@ -23,10 +23,10 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
           console.log("COMPARING:",splitLast[0],list_data_split[i]);
           
           if(splitLast[0]==list_data_split[i]){
-            chrome.tabs.update({url: "getFocused.html"});
+            chrome.tabs.update({url: "fallback/getFocused.html"});
           }
           else if(splitLast[0]==("www."+list_data_split[i])){
-            chrome.tabs.update({url: "getFocused.html"});
+            chrome.tabs.update({url: "fallback/getFocused.html"});
           }
           else if(splitLast.length > 1){
             console.log("FullComparing",urlSplitSlash[1],list_data_split[i])
