@@ -3,7 +3,7 @@ html{
 }
 
 body{
-	background:#272727;
+	background-color: rgb(89, 104, 105);
     background-blend-mode: overlay;
 
 	color:#80D0C7;
@@ -117,8 +117,8 @@ ul{
 	background:gray;
 	background: linear-gradient(
 		135deg,
-		rgba(255,255,255, 30%),
-		rgba(200,200,200, 20%)
+		rgba(190, 211, 212, 0.3),
+		rgba(194, 212, 212, 0.2)
 	);	
 	width: 10%;
 	height: 100vh;	
