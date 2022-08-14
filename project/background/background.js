@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener((reason) => {
   chrome.tabs.create({
-      url: 'focus.html'
+      url: 'landing/focus.html'
     });
 });
 

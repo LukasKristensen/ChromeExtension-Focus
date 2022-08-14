@@ -4,10 +4,10 @@
   "version": "0.2",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background/background.js"
   },
   "permissions": ["storage", "tabs", "unlimited_storage"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "preview/popup.html"
   }
 }
