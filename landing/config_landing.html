@@ -4,6 +4,8 @@
 	<title>DEVOTE</title>
 	<!--<link rel="icon" href="Unavngivet.png">-->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="custom_settings.css">
+
 </head>
 
   	<body id="mainIndexGradientRef">
@@ -12,17 +14,21 @@
 				<h1><a href="focus.html" class="link_menu">DEVOTE<a></h1>
 				<ul>
 					<li><a href="focus.html" class="link_menu">Focus</a></li>
-					<li><a href="config_list.html" class="link_menu">Configure pages</a></li>
+					<li><a href="config_list.html" class="link_menu">Configure blocked pages</a></li>
 					<li><a href="config_landing.html" class="link_menu">Configure landing page</a></li>
 					<!--<li><a href="custom_counter.html" class="link_menu">Streak counter, Books?</a></li>-->
+
 				</ul>	
 			</div>
-
 			<div>
-				<h1 class = "headlineFocus">Configure pages</h1>
-				<textarea id="notebookInput"></textarea>
-				<h4 id="saveProgress">Saved.</h4>
+				<h2>Quote</h2>
+				<textarea id="customQuote"></textarea>
+				<h2>Author</h2>
+				<textarea id="customAuthor"></textarea>
+				<h2>Background Image URL</h2>
+				<textarea id="customImage"></textarea>
 
+				<h4 id="saveProgress">Saved.</h4>
 				<button id="saveLocalData">
 					<label>Save</label>
 				</button>
@@ -34,5 +40,4 @@
 	</body>
 </html>
 
-
-<script src="focus_config.js"></script>
+<script src="config_landing.js"></script>
